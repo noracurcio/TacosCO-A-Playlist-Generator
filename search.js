@@ -36,6 +36,14 @@ event.preventDefault();
     console.log(searchArr)
     });
   });
+  
+  var searchResults = userSearch;
+  var artistEl = $("<div>").attr("class", "results");
+  $("#search-container").append(searchResults);
+  searchArr.push(searchObj)
+  console.log(searchArr)
+  
+
 
 // populate that list under the search button itself
   //append into the body section of results
@@ -47,10 +55,10 @@ event.preventDefault();
   //}
   // searchArr.forEach(renderfunction()
 
- var searchDiv = $("<div>")
-  var listenBtn = $("<button>")
-  var addBtn = $("<button>")
-  searchDiv.append(listenBtn)
-  searchDiv.append(addBtn)
-  $("#search-results").append(searchDiv)
+//  var searchDiv = $("<div>")
+//   var listenBtn = $("<button>")
+//   var addBtn = $("<button>")
+//   searchDiv.append(listenBtn)
+//   searchDiv.append(addBtn)
+//   $("#search-results").append(searchDiv)
   
