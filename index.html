@@ -1,24 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music API Group Project</title>
 
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music API Group Project</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+  </script>
 </head>
 
 <body>
 
-    <header>Taco's Co Playlist Generator</header>
-    <div class="container">
+  <header class="container-fluid">
+    <div class="row">
+    <img src="tacomusic.png" class="img-fluid col-2" alt="A taco listening to music.">
+    <h1 class="col-7">Taco's Co Playlist Generator</h1>
+    <div class="btn-group btn-group-lg col-3" role="group" aria-label="miniPlayer">
+      <button id="prev" type="button" class="btn btn-warning"><- Back</button>
+      <button id="play" type="button" class="btn btn-warning">Play/Pause</button>
+      <button id="next" type="button" class="btn btn-warning">Next -></button>
+    </div>
+    </div>
+  </header>
+  <div class="container">
+    <div class="row">
+      <!-- SEARCH AREA -->
+      <div class="col-12 col-md-6">
+      </div>
+      <div class="col-12 col-md-6">
+        <!-- COLLECTIONS -->
         <div class="row">
             <!-- SEARCH AREA -->
             <div class="col-12 col-md-6">
@@ -56,31 +79,52 @@
                         </a>
                       </div>
                     </div>
+
                 </div>
-                <!-- PLAYLIST EDIT -->
-                <div class="row">
-                    <div class="col-12">
-                      <!-- Info we need, Song name, Artist, Album, Song length, genre, year,sound file
-                      var songObject = { This data}-->
-                      <!--playlist info received as an array-->
-                      <!--display the current playlist, and edit song order manually-->
-                      <!--can remove songs with a button-->
-                        <!--a button that confirms, "are you sure? then remove from playlist array-->
-                      <!--make a miniplayer, skip forward backward, and play/pause-->
-                      <!--click song to play audio clip, song is button-->
-                      <!--shuffle from playlist with limits on metadata-->
-                        <!--Button on playlist that will shuffle through based on user specs-->
-                      <!--create new list.-->
-                        <!-- button to make empty area to fill from search area -->
-                        <!-- take songs from search area into blank list area. -->
-                        <!-- button on click "save" - new playlist is put into an object, sent to playlist selector area -->
-                      <!-- delete full playlist. -->
-                        <!--a button that confirms, "are you sure? then remove from local storage array-->
-                    </div>
+                <div class="carousel-item">
+                  <img src="pinkfloyd.jpg" class="d-block w-100" alt="cover 2">
                 </div>
+                <div class="carousel-item">
+                  <img src="pinkfloyd.jpg" class="d-block w-100" alt="cover 3">
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
             </div>
+          </div>
         </div>
+        <!-- PLAYLIST EDIT -->
+        <div class="row">
+          <div class="col-12">
+            <!-- Info we need, Song name, Artist, Album, Song length, genre, year,sound file
+                      var songObject = { This data}-->
+            <!--playlist info received as an array-->
+            <!--display the current playlist, and edit song order manually-->
+            <!--can remove songs with a button-->
+            <!--a button that confirms, "are you sure? then remove from playlist array-->
+            <!--click song to play audio clip, song is button-->
+            <!--shuffle from playlist with limits on metadata-->
+            <!--Button on playlist that will shuffle through based on user specs-->
+            <!--create new list.-->
+            <!-- button to make empty area to fill from search area -->
+            <!-- take songs from search area into blank list area. -->
+            <!-- button on click "save" - new playlist is put into an object, sent to playlist selector area -->
+            <!-- delete full playlist. -->
+            <!--a button that confirms, "are you sure? then remove from local storage array-->
+
+
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
+
 
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -88,5 +132,14 @@
     <link rel="stylesheet" href="" class="css">
     <script src="search.js"></script>
     <script src="carousel.js"></script>
+
 </body>
+
 </html>
+<!--notes
+Goal, Display tracklist, with buttons for move track up and down. and check box.
+in html make an ordered list to display info
+  
+use API to get info needed, track name, play time, sample mp3, artist,
+make list item , append info to item, and append list item to list group.
+-->
