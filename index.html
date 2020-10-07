@@ -22,6 +22,20 @@
         <div class="row">
             <!-- SEARCH AREA -->
             <div class="col-12 col-md-6"> 
+              <form id = "search">
+                <select id = "searchOptions">
+                  <option value = "artist">Artist</option>
+                  <option value = "album">Album</option>
+                  <option value = "song-name">Song Name</option>
+                  <option value = "genre">Genre</option>
+                </select>
+                <input type="text" id="search-input" class = "searchInput">
+                <input id="searchButton" type="submit" value="Search" class = "searchButton">
+              </form>
+              <div id = "search-results">
+                <div id= "search-container"></div>
+              </div>
+              <button id="playlistBuild">Let us build your playlist!</button>
             </div>
             <div class="col-12 col-md-6">
                 <!-- COLLECTIONS -->
