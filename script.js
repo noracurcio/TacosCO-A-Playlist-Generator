@@ -89,4 +89,3 @@ break;
 // function render(){
 //   }
   // searchArr.forEach(renderfunction())
-
