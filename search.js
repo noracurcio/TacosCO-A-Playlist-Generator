@@ -34,28 +34,44 @@ $("#searchButton").on("click", function (event) {
         sampleaudioLink: response.data[i].preview
       };
 
-      var searchResults = userSearch;
       // var listEl = $("<ul>").attr("id", "ulTag");
       var artistList = $("<li>").attr("class", "list-group-item liTag");
       // var playBtn = $("<button>").addClass("playBtn").text("⏵");
-      var playBtn = $("<button>").attr("class", "playBtn");
+      var playBtn = $("<button>").addClass("playBtn");
       playBtn
         .append($("<audio controls >")
         .append(
           $(`<source src=${response.data[i].preview} type="audio/mpeg"> `)
         ));
       var addPlaylistBtn = $("<button>")
-        .attr("class", "addPlaylistBtn")
+        .addClass("addPlaylistButton")
         .text("+");
-      $("#search-results").append(
-        artistList
-          .append(`<img src=${response.data[i].album.cover}> `)
-          .append(`<strong>Song:</strong> ${response.data[i].title_short} `)
-          .append(`<strong>Album:</strong> ${response.data[i].album.title} `)
-          .append(` <strong>Artist:</strong> ${response.data[i].artist.name}`)
-          .append(playBtn)
-          .append(addPlaylistBtn)
-      );
+      addPlaylistBtn.attr('id', 'addPlaylistButton');
+      $("#addPlaylistButton").on("click", function (event){
+        console.log(event)
+      })
+      var resultDiv = $("<div>")
+      resultDiv.addClass("searchResult")
+      var albumArt = $("<img>")
+      albumArt.addClass("albumArt")
+      albumArt.attr("src", response.data[i].album.cover)
+      resultDiv.append(albumArt)
+      var songResult = $("<div>")
+      songResult.addClass("songResult")
+      songResult.text("Song: " + response.data[i].title_short)
+      resultDiv.append(songResult)
+      var artistResult = $("<div>")
+      artistResult.addClass("artistResult")
+      artistResult.text("Artist: " + response.data[i].artist.name)
+      resultDiv.append(artistResult)
+      var albumResult = $("<div>")
+      albumResult.addClass("albumResult")
+      albumResult.text("Album: " + response.data[i].album.title)
+      resultDiv.append(albumResult)
+      resultDiv.append(playBtn)
+      resultDiv.append(addPlaylistBtn)
+      $("#search-results").append(resultDiv);
+    
 
       searchArr.push(searchObj);
     }
@@ -63,9 +79,6 @@ $("#searchButton").on("click", function (event) {
   });
   $("#search-results").empty();
 });
-
-$("button.playBtn").on("click", function(event){
+$("#addPlaylistButton").on("click", function (event){
   console.log(event)
-  // var sampleAudio = new Audio(target.parentElement.sampleTrack);
-  // sampleAudio.play();
 })

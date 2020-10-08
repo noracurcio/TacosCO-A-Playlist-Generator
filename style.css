@@ -51,7 +51,11 @@ header {
 
 #searchButton {
   border: none;
+<<<<<<< HEAD
   background-color: #f4a261;
+=======
+  /* background-color: #e9c46a; */
+>>>>>>> main
   border-radius: 15px;
   box-shadow: #264653;
   color: #264653;
@@ -59,16 +63,27 @@ header {
   font-size: 22px;
   font-family: 'Teko', sans-serif;  
   line-height: 22px;
+<<<<<<< HEAD
   margin: 16px;
   padding: 5px;
+=======
+  margin: 5px 5px 5px 5px;
+  padding: 2px;
+>>>>>>> main
   text-align: center;
   cursor: pointer;
   font-size: medium;
 }
 
+<<<<<<< HEAD
 button:hover {
   background-color: #e9c46a;
 }
+=======
+/* button:hover {
+  background-color: #f4a261;
+} */
+>>>>>>> main
 
 /* #searchButton {
   border: none;
@@ -92,16 +107,30 @@ button:hover {
 } */
 
 
+<<<<<<< HEAD
 
+=======
+footer {
+  background-color: #2a9d8f;
+  padding: 15px;
+  text-align: center;
+  font-size: small;
+  bottom: 0;
+  position: sticky;
+}
+>>>>>>> main
 #search{
   float: left;
   width: 100%;
+  margin: none;
+  padding: none;
 }
 .row{
   width: 100%
   
 }
 .scroll{
+<<<<<<< HEAD
   margin:4px, 4px; 
   padding:4px; 
   background-color:  #264653; 
@@ -110,6 +139,16 @@ button:hover {
   overflow-x: hidden; 
   overflow-y: auto; 
   text-align:justify; 
+=======
+    /* margin:4px, 4px; 
+    padding:px;  */
+    background-color:  #264653; 
+    width: 100%; 
+    height: 495px; 
+    overflow-x: hidden; 
+    overflow-y: auto; 
+    text-align:justify; 
+>>>>>>> main
 }
 .list-group-item{
   border: solid;
@@ -122,6 +161,7 @@ button:hover {
   width: 100%;
   height: 90%
 }
+<<<<<<< HEAD
 
 footer {
   left: 0;
@@ -132,3 +172,37 @@ footer {
   font-size: small;
   position: sticky;
  }
+=======
+.albumArt{
+  width:33%;
+  float: left;
+}
+.artistResult{
+  width: 66%;
+  float: right;
+  color: whitesmoke;
+  font-size: 25px;
+}
+.albumResult{
+  width: 66%;
+  float: right;
+  color: whitesmoke;
+  font-size: 25px;
+}
+.songResult{
+  width: 66%;
+  float: right;
+  color: whitesmoke;
+  font-size: 25px;
+}
+.playBtn{
+float: left;
+}
+.addPlaylistButton{
+float: right;
+height: 66px;
+width: 66px;
+font-size: 50px;
+}
+
+>>>>>>> main
