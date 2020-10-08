@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-
-/* travis - preview
-ryan - on click to playlist
-  local storage
-  Devon - getting audio connected
-  Madeline - jumbotron */
-
-
-
-=======
 .searchInput{
   width:66%
 }
@@ -16,35 +5,24 @@ ryan - on click to playlist
   width: 100%;
   margin: none;
 }
->>>>>>> main
 
 h1 {
   text-align: center;
 }
 
-.col-12 {
- font-family: 'Teko', sans-serif;;
-}
 
 body {
-  /* font-family: sans-serif; */
   background-color: #264653;
-  
+  font-family: 'Teko', sans-serif;
 }
 
 .main {
-      scroll-padding-top: 70px; /* height of sticky header */
+  scroll-padding-top: 70px; /* height of sticky header */
   
 }
 
-/* .wrapper {
-  padding-top: 30px;
-  padding-left: 20px;
-  padding-right: 20px;
-} */
-
 header {
-  /* position: fixed; */
+  /* position: sticky; */
   width: 100%;
   font-family: 'Teko', sans-serif;
   background-color: #2a9d8f;
@@ -64,14 +42,16 @@ header {
 .carousel {
   width: 100%;
   height: auto;
+  min-width: 100px;
+  max-width: 250px;
 }
 .carouselContainer{
   float: right;
 }
 
-button {
+#searchButton {
   border: none;
-  background-color: #e9c46a;
+  background-color: #f4a261;
   border-radius: 15px;
   box-shadow: #264653;
   color: #264653;
@@ -79,7 +59,7 @@ button {
   font-size: 22px;
   font-family: 'Teko', sans-serif;  
   line-height: 22px;
-  margin: 16px 16px 16px 20px;
+  margin: 16px;
   padding: 5px;
   text-align: center;
   cursor: pointer;
@@ -87,7 +67,7 @@ button {
 }
 
 button:hover {
-  background-color: #f4a261;
+  background-color: #e9c46a;
 }
 
 /* #searchButton {
@@ -112,18 +92,7 @@ button:hover {
 } */
 
 
-footer {
- position: fixed;
- left: 0;
- bottom: 0;
- width: 100%;
-  background-color: #2a9d8f;
-  padding: 15px;
-  text-align: center;
-  font-size: small;
-  position: absolute;
-  bottom: 0;
-}
+
 #search{
   float: left;
   width: 100%;
@@ -133,14 +102,14 @@ footer {
   
 }
 .scroll{
-    margin:4px, 4px; 
-    padding:4px; 
-    background-color:  #264653; 
-    width: 100%; 
-    height: 495px; 
-    overflow-x: hidden; 
-    overflow-y: auto; 
-    text-align:justify; 
+  margin:4px, 4px; 
+  padding:4px; 
+  background-color:  #264653; 
+  width: 100%; 
+  height: 495px; 
+  overflow-x: hidden; 
+  overflow-y: auto; 
+  text-align:justify; 
 }
 .list-group-item{
   border: solid;
@@ -153,3 +122,13 @@ footer {
   width: 100%;
   height: 90%
 }
+
+footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #2a9d8f;
+  text-align: center;
+  font-size: small;
+  position: sticky;
+ }
