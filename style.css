@@ -1,3 +1,91 @@
+
+
+
+
 h1 {
   text-align: center;
+}
+
+.col-12 {
+ font-family: 'Teko', sans-serif;;
+}
+
+body {
+  /* font-family: sans-serif; */
+  background-color: #264653;
+}
+
+.wrapper {
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+header {
+  font-family: 'Teko', sans-serif;
+  background-color: #2a9d8f;
+  text-align: center;
+  padding: 10px;
+  color: #264653;
+  border-bottom: 5px solid #e9c46a;
+}
+
+#searchButton {
+  float: left;
+  width: 33%;
+}
+
+#carousel {
+  float: right;
+  width: 66%;
+}
+
+button {
+  border: none;
+  background-color: #e9c46a;
+  border-radius: 15px;
+  box-shadow: #264653;
+  color: #264653;
+  /* display: inline-block; */
+  font-size: 22px;
+  font-family: 'Teko', sans-serif;  
+  line-height: 22px;
+  margin: 16px 16px 16px 20px;
+  padding: 5px;
+  text-align: center;
+  cursor: pointer;
+  font-size: medium;
+}
+
+button:hover {
+  background-color: #f4a261;
+}
+
+/* #searchButton {
+  border: none;
+  background-color: #e9c46a;
+  border-radius: 15px;
+  box-shadow: #264653;
+  color: #264653;
+  display: inline-block;
+  font-size: 22px;
+  font-family: 'Teko', sans-serif;  
+  line-height: 22px;
+  margin: 16px 16px 16px 20px;
+  padding: 5px;
+  text-align: center;
+  cursor: pointer;
+  font-size: medium;
+}
+
+button:hover {
+  background-color: #f4a261;
+} */
+
+
+footer {
+  background-color: #2a9d8f;
+  padding: 15px;
+  text-align: center;
+  font-size: small;
 }
