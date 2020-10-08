@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 /* travis - preview
 ryan - on click to playlist
@@ -7,6 +8,15 @@ ryan - on click to playlist
 
 
 
+=======
+.searchInput{
+  width:66%
+}
+.container{
+  width: 100%;
+  margin: none;
+}
+>>>>>>> main
 
 h1 {
   text-align: center;
@@ -47,13 +57,16 @@ header {
 
 
 #searchButton {
-  float: left;
+  float: right;
   width: 33%;
 }
 
-#carousel {
+.carousel {
+  width: 100%;
+  height: auto;
+}
+.carouselContainer{
   float: right;
-  width: 66%;
 }
 
 button {
@@ -108,6 +121,8 @@ footer {
   padding: 15px;
   text-align: center;
   font-size: small;
+  position: absolute;
+  bottom: 0;
 }
 #search{
   float: left;
@@ -121,7 +136,7 @@ footer {
     margin:4px, 4px; 
     padding:4px; 
     background-color:  #264653; 
-    width: 500px; 
+    width: 100%; 
     height: 495px; 
     overflow-x: hidden; 
     overflow-y: auto; 
@@ -129,4 +144,12 @@ footer {
 }
 .list-group-item{
   border: solid;
+}
+.playlistBuild{
+  align-self: center;
+  float: bottom;
+}
+.playlist{
+  width: 100%;
+  height: 90%
 }

@@ -22,23 +22,21 @@
   </script>
   <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
   <header class="container-fluid">
     <div class="row">
     <img src="tacomusic.png" class="img-fluid col-2" alt="A taco listening to music.">
     <h1 class="col-7">Taco's Co Playlist Generator</h1>
-    <div class="btn-group btn-group-lg col-3" role="group" aria-label="miniPlayer">
-      <button id="prev" type="button" class="btn btn-warning">Back<Back</button>
-      <button id="play" type="button" class="btn btn-warning">Play/Pause</button>
-      <button id="next" type="button" class="btn btn-warning">Next</button>
-    </div>
     </div>
   </header>
+<<<<<<< HEAD
 
   <main>
   <div class="container">
+=======
+  <div class="container-fluid">
+>>>>>>> main
     <div class="row">
             <!-- SEARCH AREA -->
             <div class="col-12 col-md-4"id = "search">
@@ -47,10 +45,11 @@
                 <input id="searchButton" type="submit" value="Search" class = "searchButton">
               </form>
               <div id = "search-results" class = "scroll"></div>
-              <button id="playlistBuild">Let us build your playlist!</button>
+
             </div>
 
-            <div class="col-12 col-md-4 playlist">
+            <div class="col-12 col-md-4">
+              <div class = "playlist" id = "playlist"> placeholder
               <!-- Info we need, Song name, Artist, Album, Song length, genre, year,sound file
                         var songObject = { This data}-->
               <!--playlist info received as an array-->
@@ -66,12 +65,14 @@
               <!-- button on click "save" - new playlist is put into an object, sent to playlist selector area -->
               <!-- delete full playlist. -->
               <!--a button that confirms, "are you sure? then remove from local storage array-->
+              </div>
+              <button id="playlistBuild" class="playlistBuild">Export your playlist!</button>
             </div>
           
-            <div class="col-12 col-md-4"  id = carousel>
+            <div class="col-12 col-md-4"  id = carouselContainer>
                 <!-- COLLECTIONS -->
                 
-                    <div class="col-12">
+                    <div class="col-12 carousel">
                       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
                           <div class="carousel-item active">
