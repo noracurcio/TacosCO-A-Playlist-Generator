@@ -38,25 +38,38 @@
   </header>
   <div class="container">
     <div class="row">
-      <!-- SEARCH AREA -->
-      <div class="col-12 col-md-6">
-      </div>
-      <div class="col-12 col-md-6">
-        <!-- COLLECTIONS -->
-        <div class="row">
             <!-- SEARCH AREA -->
-            <div class="col-12 col-md-6" id = "search">
+            <div class="col-12 col-md-4"id = "search">
               <form id = "search">
                 <input type="text" id="search-input" class = "searchInput">
                 <input id="searchButton" type="submit" value="Search" class = "searchButton">
               </form>
-              <div id = "search-results"></div>
+              <div id = "search-results" class = "scroll"></div>
               <button id="playlistBuild">Let us build your playlist!</button>
             </div>
-            <div class="col-12 col-md-6">
+
+            <div class="col-12 col-md-4 playlist">
+              <!-- Info we need, Song name, Artist, Album, Song length, genre, year,sound file
+                        var songObject = { This data}-->
+              <!--playlist info received as an array-->
+              <!--display the current playlist, and edit song order manually-->
+              <!--can remove songs with a button-->
+              <!--a button that confirms, "are you sure? then remove from playlist array-->
+              <!--click song to play audio clip, song is button-->
+              <!--shuffle from playlist with limits on metadata-->
+              <!--Button on playlist that will shuffle through based on user specs-->
+              <!--create new list.-->
+              <!-- button to make empty area to fill from search area -->
+              <!-- take songs from search area into blank list area. -->
+              <!-- button on click "save" - new playlist is put into an object, sent to playlist selector area -->
+              <!-- delete full playlist. -->
+              <!--a button that confirms, "are you sure? then remove from local storage array-->
+            </div>
+          
+            <div class="col-12 col-md-4"  id = carousel>
                 <!-- COLLECTIONS -->
-                <div class="row">
-                    <div class="col-12" id = carousel>
+                
+                    <div class="col-12">
                       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
                           <div class="carousel-item active">
@@ -79,6 +92,7 @@
                         </a>
                       </div>
                     </div>
+<<<<<<< HEAD
 
                 
             </div>
@@ -107,9 +121,11 @@
           </div>
         </div>
       </div>
+=======
+            </div>   
+>>>>>>> main
     </div>
   </div>
-
   <footer class="footer">
     <p>
       Tacos + music, does it get any better than that? We hope you've enjoyed our website!
