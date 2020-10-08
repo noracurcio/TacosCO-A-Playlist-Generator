@@ -1,4 +1,10 @@
 
+/* travis - preview
+ryan - on click to playlist
+  local storage
+  Devon - getting audio connected
+  Madeline - jumbotron */
+
 
 
 
@@ -13,15 +19,23 @@ h1 {
 body {
   /* font-family: sans-serif; */
   background-color: #264653;
+  
 }
 
-.wrapper {
+.main {
+      scroll-padding-top: 70px; /* height of sticky header */
+  
+}
+
+/* .wrapper {
   padding-top: 30px;
   padding-left: 20px;
   padding-right: 20px;
-}
+} */
 
 header {
+  /* position: fixed; */
+  width: 100%;
   font-family: 'Teko', sans-serif;
   background-color: #2a9d8f;
   text-align: center;
@@ -29,6 +43,8 @@ header {
   color: #264653;
   border-bottom: 5px solid #e9c46a;
 }
+
+
 
 #searchButton {
   float: left;
@@ -84,6 +100,10 @@ button:hover {
 
 
 footer {
+ position: fixed;
+ left: 0;
+ bottom: 0;
+ width: 100%;
   background-color: #2a9d8f;
   padding: 15px;
   text-align: center;
