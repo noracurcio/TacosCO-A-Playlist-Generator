@@ -49,7 +49,7 @@ header {
 
 button {
   border: none;
-  background-color: #e9c46a;
+  /* background-color: #e9c46a; */
   border-radius: 15px;
   box-shadow: #264653;
   color: #264653;
@@ -57,16 +57,16 @@ button {
   font-size: 22px;
   font-family: 'Teko', sans-serif;  
   line-height: 22px;
-  margin: 16px 16px 16px 20px;
-  padding: 5px;
+  margin: 5px 5px 5px 5px;
+  padding: 2px;
   text-align: center;
   cursor: pointer;
   font-size: medium;
 }
 
-button:hover {
+/* button:hover {
   background-color: #f4a261;
-}
+} */
 
 /* #searchButton {
   border: none;
@@ -95,20 +95,22 @@ footer {
   padding: 15px;
   text-align: center;
   font-size: small;
-  position: absolute;
   bottom: 0;
+  position: sticky;
 }
 #search{
   float: left;
   width: 100%;
+  margin: none;
+  padding: none;
 }
 .row{
   width: 100%
   
 }
 .scroll{
-    margin:4px, 4px; 
-    padding:4px; 
+    /* margin:4px, 4px; 
+    padding:px;  */
     background-color:  #264653; 
     width: 100%; 
     height: 495px; 
@@ -127,3 +129,35 @@ footer {
   width: 100%;
   height: 90%
 }
+.albumArt{
+  width:33%;
+  float: left;
+}
+.artistResult{
+  width: 66%;
+  float: right;
+  color: whitesmoke;
+  font-size: 25px;
+}
+.albumResult{
+  width: 66%;
+  float: right;
+  color: whitesmoke;
+  font-size: 25px;
+}
+.songResult{
+  width: 66%;
+  float: right;
+  color: whitesmoke;
+  font-size: 25px;
+}
+.playBtn{
+float: left;
+}
+.addPlaylistButton{
+float: right;
+height: 66px;
+width: 66px;
+font-size: 50px;
+}
+
