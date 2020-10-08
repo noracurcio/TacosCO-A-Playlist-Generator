@@ -31,18 +31,19 @@ $("#searchButton").on("click", function (event) {
         songName: response.data[i].title_short,
         length: parseInt(response.data[i].duration),
         albumArtwork: response.data[i].album.cover_small,
+        sampleaudioLink: response.data[i].preview
       };
 
       var searchResults = userSearch;
       // var listEl = $("<ul>").attr("id", "ulTag");
       var artistList = $("<li>").attr("class", "list-group-item liTag");
-      // var playBtn = $("<button>").attr("class", "playBtn").text("⏵");
+      // var playBtn = $("<button>").addClass("playBtn").text("⏵");
       var playBtn = $("<button>").attr("class", "playBtn");
       playBtn
-        .append($("<audio controls >"))
+        .append($("<audio controls >")
         .append(
           $(`<source src=${response.data[i].preview} type="audio/mpeg"> `)
-        );
+        ));
       var addPlaylistBtn = $("<button>")
         .attr("class", "addPlaylistBtn")
         .text("+");
@@ -58,7 +59,13 @@ $("#searchButton").on("click", function (event) {
 
       searchArr.push(searchObj);
     }
-    // console.log(searchArr)
+    console.log(searchArr)
   });
   $("#search-results").empty();
 });
+
+$("button.playBtn").on("click", function(event){
+  console.log(event)
+  // var sampleAudio = new Audio(target.parentElement.sampleTrack);
+  // sampleAudio.play();
+})
