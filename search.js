@@ -45,8 +45,12 @@ $("#searchButton").on("click", function (event) {
           $(`<source src=${response.data[i].preview} type="audio/mpeg"> `)
         ));
       var addPlaylistBtn = $("<button>")
-        .attr("class", "addPlaylistBtn")
+        .addClass("addPlaylistButton")
         .text("+");
+        addPlaylistBtn.attr('id', 'addPlaylistButton');
+        $("#addPlayListButton").on("click", function (event) {
+          console.log(event);
+        });
       $("#search-results").append(
         artistList
           .append(`<img src=${response.data[i].album.cover}> `)
@@ -66,6 +70,6 @@ $("#searchButton").on("click", function (event) {
 
 $("button.playBtn").on("click", function(event){
   console.log(event)
-  // var sampleAudio = new Audio(target.parentElement.sampleTrack);
-  // sampleAudio.play();
 })
+
+
