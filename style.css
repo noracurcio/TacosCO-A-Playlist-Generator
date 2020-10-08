@@ -109,4 +109,24 @@ footer {
   text-align: center;
   font-size: small;
 }
-
+#search{
+  float: left;
+  width: 100%;
+}
+.row{
+  width: 100%
+  
+}
+.scroll{
+    margin:4px, 4px; 
+    padding:4px; 
+    background-color:  #264653; 
+    width: 500px; 
+    height: 495px; 
+    overflow-x: hidden; 
+    overflow-y: auto; 
+    text-align:justify; 
+}
+.list-group-item{
+  border: solid;
+}
