@@ -7,19 +7,18 @@ var apiKey = "444d1a61f4mshd57eb459b8b0709p1e745ajsn2ac16a025434"
 
 
 
-document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.carousel');
-    var instances = M.Carousel.init(elems, options);
-  });
+// document.addEventListener('DOMContentLoaded', function() {
+//     var elems = document.querySelectorAll('.carousel');
+//     var instances = M.Carousel.init(elems, options);
+//   });
 
   // Or with jQuery
 
-  $(document).ready(function(){
-    $('.carousel').carousel();
-  });
-	  
-  
-  
+//   $(document).ready(function(){
+//     $('.carousel').carousel();
+//   });
+
+
 //make ajax to try to pull img from playlists into an array
 //This is the throwback Playlist
 var throwbackPlaylist = {
@@ -34,26 +33,36 @@ var throwbackPlaylist = {
 }
 
 
-var currentClick = 
+
 
 
 
 
 $.ajax(throwbackPlaylist).done(function (response) {
     console.log(response);
-    $("#picture-1").on("click", function(){
-		var playlistInfo = $("#carousel");
+    $("#picture-1").on("click", function(test){
+		
+		var playlistInfo = $("#playlist-info")
     
-        var newPtag = $("<p>").text(response.tracks);
+		for(i = 0; i < response.tracks.data.length; i++){
+			console.log(test)
+			var trackInfo = response.tracks.data[i]
+			var titlePTag = $("<p>").addClass("right-text").text(trackInfo.title);
+			var artistPTag = $("<p>").addClass("right-text").text(trackInfo.artist.name);
+			playlistInfo.append(titlePTag, artistPTag)
+
+			 
+
+		}
         
 
-        playlistInfo.append(newPtag)
+        
 	
 
 
 });
 
-
+})
 
 
 
@@ -95,5 +104,4 @@ $.ajax(rockPlaylist).done(function (response) {
     console.log(response);
     
     
-})
 })
