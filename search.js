@@ -127,6 +127,14 @@ $("#appleExport").on("click", function (event){
 //   }// playlist array variable name is Results
 
 
+
+
+
+
+
+
+
+
 let myTypeItInstance = new TypeIt("#element", {
   // speed: 100,
   afterComplete: function (step, instance) {
