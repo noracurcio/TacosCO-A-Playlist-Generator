@@ -33,8 +33,7 @@ $("#searchButton").on("click", function (event) {
         albumArtwork: response.data[i].album.cover_small,
         sampleaudioLink: response.data[i].preview,
       };
-
-      var artistList = $("<li>").attr("class", "list-group-item liTag");
+      var indx = i
       var playBtn = $("<button>").addClass("playBtn");
       playBtn.append(
         $("<audio controls >").append(
@@ -44,46 +43,89 @@ $("#searchButton").on("click", function (event) {
       var addPlaylistBtn = $("<button>")
         .addClass("addPlaylistButton")
         .text("+");
-      addPlaylistBtn.attr("id", "addPlaylistButton" + i).attr("data-index", i);
-      // $(document).on("click", "#addPlaylistButton" + i, function (event) {
-      //   var results = searchArr[event.target.dataset.index];
-      //   var li = $("<li>").text(
-      //     "Artist Name: " + results.artist + " Song Name:  " + results.songName
-      //   );
-      //   $(".playlist").append(li);
-      // });
-      var resultDiv = $("<div>");
-      resultDiv.addClass("searchResult");
-      var albumArt = $("<img>");
-      albumArt.addClass("albumArt");
-      albumArt.attr("src", response.data[i].album.cover);
-      resultDiv.append(albumArt);
-      var songResult = $("<div>");
-      songResult.addClass("songResult");
-      songResult.text("Song: " + response.data[i].title_short);
-      resultDiv.append(songResult);
-      var artistResult = $("<div>");
-      artistResult.addClass("artistResult");
-      artistResult.text("Artist: " + response.data[i].artist.name);
-      resultDiv.append(artistResult);
-      var albumResult = $("<div>");
-      albumResult.addClass("albumResult");
-      albumResult.text("Album: " + response.data[i].album.title);
-      resultDiv.append(albumResult);
-      resultDiv.append(playBtn);
-      resultDiv.append(addPlaylistBtn);
+      addPlaylistBtn.attr('id', "addPlaylistButton" + i);
+      addPlaylistBtn.attr('indx', indx);
+
+      var resultDiv = $("<div>")
+      resultDiv.addClass("searchResult")
+      var albumArt = $("<img>")
+      albumArt.addClass("albumArt")
+      albumArt.attr("src", response.data[i].album.cover)
+      resultDiv.append(albumArt)
+      var songResult = $("<div>")
+      songResult.addClass("songResult")
+      songResult.text("Song: " + response.data[i].title_short)
+      resultDiv.append(songResult)
+      var artistResult = $("<div>")
+      artistResult.addClass("artistResult")
+      artistResult.text("Artist: " + response.data[i].artist.name)
+      resultDiv.append(artistResult)
+      var albumResult = $("<div>")
+      albumResult.addClass("albumResult")
+      albumResult.text("Album: " + response.data[i].album.title)
+      resultDiv.append(albumResult)
+      resultDiv.append(playBtn)
+      resultDiv.append(addPlaylistBtn)
       $("#search-results").append(resultDiv);
 
       searchArr.push(searchObj);
     }
-    $(document).on("click", "#addPlaylistButton" + i, function (event) {
-      var results = searchArr[event.target.dataset.index];
-      console.log("click");
-    });
-    console.log(searchArr);
+    for (a=0; a < 25; a++){
+    var button = document.getElementById('addPlaylistButton' + a)
+    $(button).on("click", function(event){
+      console.log(event.currentTarget.parentElement.children[1].textContent)
+      console.log(event.currentTarget.parentElement.children[2].textContent)
+      console.log(event.currentTarget.parentElement.children[3].textContent)
+    })
+  }
+    console.log(searchArr)
   });
   $("#search-results").empty();
 });
+
+// $("#addPlaylistButton0").on("click", (event) => {
+//     console.log(event);
+//   })
+
+// var button = document.getElementById('addPlaylistButton0')
+// $(button).on("click", function(event){
+//   console.log(event)
+// })
+
+$("#spotifyExport").on("click", function (event){
+  var songData = (event.target.parentElement.children[0].innerText)
+  // console.log(event.target.parentElement.children[0].innerText)
+  const copyToClipboard = str => {
+    const el = document.createElement('textarea');
+    el.value = str;
+    el.setAttribute ('readonly', '')
+    el.style.position = 'absolute';
+    el.style.left = '-9999px';
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
+  }
+  copyToClipboard(songData)
+  alert("Your playlist has been copied to your clipboard. Open a blank notepad file and paste!")
+})
+
+$("#appleExport").on("click", function (event){
+  console.log(event.target.parentElement.children[0].firstChild)
+})
+
+// const copyToClipboard = str => {
+//     const el = document.createElement('textarea');
+//     el.value = str;
+//     el.setAttribute ('readonly', '')
+//     el.style.position = 'absolute';
+//     el.style.left = '-9999px';
+//     document.body.appendChild(el);
+//     el.select();
+//     document.execCommand('copy');
+//     document.body.removeChild(el);
+//   }// playlist array variable name is Results
+
 
 let myTypeItInstance = new TypeIt("#element", {
   // speed: 100,
@@ -93,4 +135,3 @@ let myTypeItInstance = new TypeIt("#element", {
 });
 
 myTypeItInstance.go();
-
