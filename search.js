@@ -33,10 +33,7 @@ $("#searchButton").on("click", function (event) {
         albumArtwork: response.data[i].album.cover_small,
         sampleaudioLink: response.data[i].preview
       };
-
-      // var listEl = $("<ul>").attr("id", "ulTag");
-      var artistList = $("<li>").attr("class", "list-group-item liTag");
-      // var playBtn = $("<button>").addClass("playBtn").text("⏵");
+      var indx = i
       var playBtn = $("<button>").addClass("playBtn");
       playBtn
         .append($("<audio controls >")
@@ -46,10 +43,9 @@ $("#searchButton").on("click", function (event) {
       var addPlaylistBtn = $("<button>")
         .addClass("addPlaylistButton")
         .text("+");
-      addPlaylistBtn.attr('id', 'addPlaylistButton');
-      $("#addPlaylistButton").on("click", function (event){
-        console.log(event)
-      })
+      addPlaylistBtn.attr('id', "addPlaylistButton" + i);
+      addPlaylistBtn.attr('indx', indx);
+
       var resultDiv = $("<div>")
       resultDiv.addClass("searchResult")
       var albumArt = $("<img>")
@@ -75,10 +71,58 @@ $("#searchButton").on("click", function (event) {
 
       searchArr.push(searchObj);
     }
+    for (a=0; a < 25; a++){
+    var button = document.getElementById('addPlaylistButton' + a)
+    $(button).on("click", function(event){
+      console.log(event.currentTarget.parentElement.children[1].textContent)
+      console.log(event.currentTarget.parentElement.children[2].textContent)
+      console.log(event.currentTarget.parentElement.children[3].textContent)
+    })
+  }
     console.log(searchArr)
   });
   $("#search-results").empty();
 });
-$("#addPlaylistButton").on("click", function (event){
-  console.log(event)
+
+// $("#addPlaylistButton0").on("click", (event) => {
+//     console.log(event);
+//   })
+
+// var button = document.getElementById('addPlaylistButton0')
+// $(button).on("click", function(event){
+//   console.log(event)
+// })
+
+$("#spotifyExport").on("click", function (event){
+  var songData = (event.target.parentElement.children[0].innerText)
+  // console.log(event.target.parentElement.children[0].innerText)
+  const copyToClipboard = str => {
+    const el = document.createElement('textarea');
+    el.value = str;
+    el.setAttribute ('readonly', '')
+    el.style.position = 'absolute';
+    el.style.left = '-9999px';
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
+  }
+  copyToClipboard(songData)
+  alert("Your playlist has been copied to your clipboard. Open a blank notepad file and paste!")
 })
+
+$("#appleExport").on("click", function (event){
+  console.log(event.target.parentElement.children[0].firstChild)
+})
+
+// const copyToClipboard = str => {
+//     const el = document.createElement('textarea');
+//     el.value = str;
+//     el.setAttribute ('readonly', '')
+//     el.style.position = 'absolute';
+//     el.style.left = '-9999px';
+//     document.body.appendChild(el);
+//     el.select();
+//     document.execCommand('copy');
+//     document.body.removeChild(el);
+//   }// playlist array variable name is Results
