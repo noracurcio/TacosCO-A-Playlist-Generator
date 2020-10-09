@@ -30,3 +30,4 @@ $("#song").append(btnUp, btnDwn); //stick the buttons onto the song location
 $("#btnUp").on("click", moveUp(idx));
 $("#btnDwn").on("click", moveDwn(idx));
 }
+
