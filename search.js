@@ -33,10 +33,7 @@ $("#searchButton").on("click", function (event) {
         albumArtwork: response.data[i].album.cover_small,
         sampleaudioLink: response.data[i].preview
       };
-
-      // var listEl = $("<ul>").attr("id", "ulTag");
-      var artistList = $("<li>").attr("class", "list-group-item liTag");
-      // var playBtn = $("<button>").addClass("playBtn").text("⏵");
+      var indx = i
       var playBtn = $("<button>").addClass("playBtn");
       playBtn
         .append($("<audio controls >")
@@ -46,9 +43,10 @@ $("#searchButton").on("click", function (event) {
       var addPlaylistBtn = $("<button>")
         .addClass("addPlaylistButton")
         .text("+");
-      addPlaylistBtn.attr('id', 'addPlaylistButton');
-      $("#addPlaylistButton").on("click", function (event){
-        console.log(event)
+      addPlaylistBtn.attr('id', "addPlaylistButton");
+      addPlaylistBtn.attr('indx', indx);
+      $("#addPlaylistButton").on("click", function (target){
+        console.log(target)
       })
       var resultDiv = $("<div>")
       resultDiv.addClass("searchResult")
@@ -82,3 +80,6 @@ $("#searchButton").on("click", function (event) {
 $("#addPlaylistButton").on("click", function (event){
   console.log(event)
 })
+
+
+// playlist array variable name is Results
