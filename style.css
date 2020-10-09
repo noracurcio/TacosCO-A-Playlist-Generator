@@ -1,10 +1,10 @@
 .searchInput{
   width:66%
 }
-.container{
+/* .container{
   width: 100%;
   margin: none;
-}
+} */
 
 h1 {
   text-align: center;
@@ -21,8 +21,7 @@ body {
   
 }
 
-header {
-  /* position: sticky; */
+.header {
   width: 100%;
   font-family: 'Teko', sans-serif;
   background-color: #2a9d8f;
@@ -30,8 +29,32 @@ header {
   padding: 10px;
   color: #264653;
   border-bottom: 5px solid #e9c46a;
+  height: 60px;
 }
 
+#taco {
+  width: 44px;
+  height: 33px;
+  
+}
+
+#title {
+  font-size: 25px;
+  
+}
+
+section {
+  position: sticky;
+  width: 100%;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  background-color: #e76f51;
+  text-align: center;
+  /* padding: 10px; */
+  /* color: #264653; */
+  height: 40px;
+  top: 0;
+  /* padding-top: 60px; */
+}
 
 
 #searchButton {
@@ -51,11 +74,7 @@ header {
 
 #searchButton {
   border: none;
-<<<<<<< HEAD
   background-color: #f4a261;
-=======
-  /* background-color: #e9c46a; */
->>>>>>> main
   border-radius: 15px;
   box-shadow: #264653;
   color: #264653;
@@ -63,27 +82,16 @@ header {
   font-size: 22px;
   font-family: 'Teko', sans-serif;  
   line-height: 22px;
-<<<<<<< HEAD
-  margin: 16px;
-  padding: 5px;
-=======
   margin: 5px 5px 5px 5px;
   padding: 2px;
->>>>>>> main
   text-align: center;
   cursor: pointer;
   font-size: medium;
 }
 
-<<<<<<< HEAD
 button:hover {
   background-color: #e9c46a;
 }
-=======
-/* button:hover {
-  background-color: #f4a261;
-} */
->>>>>>> main
 
 /* #searchButton {
   border: none;
@@ -107,18 +115,6 @@ button:hover {
 } */
 
 
-<<<<<<< HEAD
-
-=======
-footer {
-  background-color: #2a9d8f;
-  padding: 15px;
-  text-align: center;
-  font-size: small;
-  bottom: 0;
-  position: sticky;
-}
->>>>>>> main
 #search{
   float: left;
   width: 100%;
@@ -130,7 +126,6 @@ footer {
   
 }
 .scroll{
-<<<<<<< HEAD
   margin:4px, 4px; 
   padding:4px; 
   background-color:  #264653; 
@@ -139,16 +134,6 @@ footer {
   overflow-x: hidden; 
   overflow-y: auto; 
   text-align:justify; 
-=======
-    /* margin:4px, 4px; 
-    padding:px;  */
-    background-color:  #264653; 
-    width: 100%; 
-    height: 495px; 
-    overflow-x: hidden; 
-    overflow-y: auto; 
-    text-align:justify; 
->>>>>>> main
 }
 .list-group-item{
   border: solid;
@@ -161,7 +146,6 @@ footer {
   width: 100%;
   height: 90%
 }
-<<<<<<< HEAD
 
 footer {
   left: 0;
@@ -172,7 +156,6 @@ footer {
   font-size: small;
   position: sticky;
  }
-=======
 .albumArt{
   width:33%;
   float: left;
@@ -205,4 +188,36 @@ width: 66px;
 font-size: 50px;
 }
 
->>>>>>> main
+
+
+
+/* WORKING QUOTE SLIDESHOW */
+
+.slideshow-container {
+  position: relative;
+  background: #e9c46a;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.tacoQuotes {
+  display: none;
+  text-align: center;
+}
+
+.dot {
+  cursor: pointer;
+  height: 8px;
+  width: 8px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+q {font-style: italic;
+}
