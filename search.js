@@ -78,6 +78,9 @@ $("#searchButton").on("click", function (event) {
       console.log(event.currentTarget.parentElement.children[1].textContent)
       console.log(event.currentTarget.parentElement.children[2].textContent)
       console.log(event.currentTarget.parentElement.children[3].textContent)
+
+      var li = $("<lil>").text("Artist Name: " + event.currentTarget.parentElement.children[1].textContent) 
+      $(".playlist").append(li)
     })
   }
     console.log(searchArr)
