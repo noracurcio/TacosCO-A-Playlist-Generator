@@ -1,3 +1,5 @@
+$(document).ready(function() {
+
 let userChoice;
 let userSearch;
 let artist;
@@ -73,8 +75,17 @@ $("#searchButton").on("click", function (event) {
     for (a=0; a < 29; a++){
     var button = document.getElementById('addPlaylistButton' + a)
     $(button).on("click", function(event){
+ 
      
       console.log(event)
+
+      console.log(event.currentTarget.parentElement.children[1].textContent)
+      console.log(event.currentTarget.parentElement.children[2].textContent)
+      console.log(event.currentTarget.parentElement.children[3].textContent)
+
+      var li = $("<lil>").addClass("list-group-item list-group-item-light").text(event.currentTarget.parentElement.children[1].textContent + event.currentTarget.parentElement.children[2].textContent + event.currentTarget.parentElement.children[3].textContent)
+      $(".playlist").append(li)
+
     })
   }
     console.log(searchArr)
@@ -142,3 +153,4 @@ let myTypeItInstance = new TypeIt("#element", {
 });
 
 myTypeItInstance.go();
+})
