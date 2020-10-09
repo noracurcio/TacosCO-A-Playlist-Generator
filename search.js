@@ -33,16 +33,15 @@ $("#searchButton").on("click", function (event) {
         songName: response.data[i].title_short,
         length: parseInt(response.data[i].duration),
         albumArtwork: response.data[i].album.cover_small,
-        sampleaudioLink: response.data[i].preview
+        sampleaudioLink: response.data[i].preview,
       };
       var indx = i
       var playBtn = $("<button>").addClass("playBtn");
-      playBtn
-        .append($("<audio controls >")
-        .append(
+      playBtn.append(
+        $("<audio controls >").append(
           $(`<source src=${response.data[i].preview} type="audio/mpeg"> `)
-        ));
-
+        )
+      );
       var addPlaylistBtn = $("<button>")
         .addClass("addPlaylistButton")
         .text("+");
@@ -70,7 +69,6 @@ $("#searchButton").on("click", function (event) {
       resultDiv.append(playBtn)
       resultDiv.append(addPlaylistBtn)
       $("#search-results").append(resultDiv);
-    
 
       searchArr.push(searchObj);
     }
@@ -129,3 +127,21 @@ $("#appleExport").on("click", function (event){
 //     document.execCommand('copy');
 //     document.body.removeChild(el);
 //   }// playlist array variable name is Results
+
+
+
+
+
+
+
+
+
+
+let myTypeItInstance = new TypeIt("#element", {
+  // speed: 100,
+  afterComplete: function (step, instance) {
+    instance.destroy();
+}
+});
+
+myTypeItInstance.go();
