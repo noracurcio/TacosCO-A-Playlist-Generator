@@ -43,13 +43,20 @@ $("#searchButton").on("click", function (event) {
         .append(
           $(`<source src=${response.data[i].preview} type="audio/mpeg"> `)
         ));
+
       var addPlaylistBtn = $("<button>")
         .addClass("addPlaylistButton")
         .text("+");
-      addPlaylistBtn.attr('id', 'addPlaylistButton');
-      $("#addPlaylistButton").on("click", function (event){
-        console.log(event)
-      })
+      addPlaylistBtn.attr('id', 'addPlaylistButton' + i);
+      addPlaylistBtn.attr("data-index", i);
+
+      $(document).on("click", "#addPlaylistButton" + i, function(event) {
+        var results = searchArr[event.target.dataset.index]
+        var li = $("<li>").text("Artist Name: " + results.artist + "Song Name:  " +  results.songName + "Album Name: " + results.album)
+        $(".playlist").append(li)
+
+      }) 
+     
       var resultDiv = $("<div>")
       resultDiv.addClass("searchResult")
       var albumArt = $("<img>")
@@ -79,8 +86,6 @@ $("#searchButton").on("click", function (event) {
   });
   $("#search-results").empty();
 });
-$("#addPlaylistButton").on("click", function (event){
-  console.log(event)
-})
+
 
 
