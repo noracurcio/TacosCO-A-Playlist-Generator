@@ -161,8 +161,12 @@ width: 66px;
 font-size: 50px;
 }
 
-
-.right-text{
-  float: right;
-
+.spotifyExport{
+  float: left;
+  width: 45%
 }
+.appleExport{
+  float: right;
+  width: 45%
+}
+
