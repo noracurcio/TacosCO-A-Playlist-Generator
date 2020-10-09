@@ -41,6 +41,8 @@ $.ajax(throwbackPlaylist).done(function (response) {
 	
 
     $("#picture-1").on("click", function(test){
+
+		$("#playlist-info").empty()
 		
 		var playlistInfo = $("#playlist-info")
     
@@ -52,7 +54,7 @@ $.ajax(throwbackPlaylist).done(function (response) {
 			titleInfo = (response.tracks.data[i].title)
 			artistInfo = (response.tracks.data[i].artist.name)
 			albumInfo = (response.tracks.data[i].album.title)
-			songInfo = $("<li>").addClass("text-white bg-dark").text("Title:  " + titleInfo + "Artist:  " + artistInfo + "Album:  " + albumInfo);
+			songInfo = $("<li>").addClass("text-white bg-dark").text("Title:  " + titleInfo + "..." + "Artist:  " + artistInfo + "..." + "Album:  " + albumInfo);
 			newBr = $("<br>")
 			// var artistLi = $("<li>").addClass("right-text text-white bg-dark").text("Artist:  " + trackInfo.artist.name + "   ");
 			ulTag.append(songInfo)
@@ -71,11 +73,6 @@ $.ajax(throwbackPlaylist).done(function (response) {
 
 
 
-
-
-
-
-
 //This is the workout playlist
 var workoutPlaylist = {
 	"async": true,
@@ -89,8 +86,29 @@ var workoutPlaylist = {
 }
 
 $.ajax(workoutPlaylist).done(function (response) {
-    console.log(response);
+	console.log(response);
+	$("#picture-2").on("click", function(test){
+
+		$("#playlist-info").empty()
+		var playlistInfo = $("#playlist-info")
     
+		for(i = 0; i < 4; i++){
+			console.log(test)
+			// var trackInfo = response.tracks.data[i]
+			ulTag = $("<ul>")
+			
+			titleInfo = (response.tracks.data[i].title)
+			artistInfo = (response.tracks.data[i].artist.name)
+			albumInfo = (response.tracks.data[i].album.title)
+			songInfo = $("<li>").addClass("text-white bg-dark").text("Title:  " + titleInfo + "..." + "Artist:  " + artistInfo + "..." + "Album:  " + albumInfo);
+			newBr = $("<br>")
+			// var artistLi = $("<li>").addClass("right-text text-white bg-dark").text("Artist:  " + trackInfo.artist.name + "   ");
+			ulTag.append(songInfo)
+			playlistInfo.append(ulTag)
+			
+		}
+
+	});  
     
 }); 
 
@@ -111,7 +129,29 @@ var rockPlaylist = {
 }
 
 $.ajax(rockPlaylist).done(function (response) {
-    console.log(response);
+	console.log(response);
+	$("#picture-3").on("click", function(test){
+
+		$("#playlist-info").empty()
+		var playlistInfo = $("#playlist-info")
+    
+		for(i = 0; i < 4; i++){
+			console.log(test)
+			// var trackInfo = response.tracks.data[i]
+			ulTag = $("<ul>")
+			
+			titleInfo = (response.tracks.data[i].title)
+			artistInfo = (response.tracks.data[i].artist.name)
+			albumInfo = (response.tracks.data[i].album.title)
+			songInfo = $("<li>").addClass("text-white bg-dark").text("Title:  " + titleInfo + "..." + "Artist:  " + artistInfo + "..." + "Album:  " + albumInfo);
+			newBr = $("<br>")
+			// var artistLi = $("<li>").addClass("right-text text-white bg-dark").text("Artist:  " + trackInfo.artist.name + "   ");
+			ulTag.append(songInfo)
+			playlistInfo.append(ulTag)
+			
+		}
+
+	});  
     
     
 })
