@@ -1,3 +1,5 @@
+$(document).ready(function() {
+
 let userChoice;
 let userSearch;
 let artist;
@@ -82,10 +84,11 @@ $("#searchButton").on("click", function (event) {
 
       searchArr.push(searchObj);
     }
+
     console.log(searchArr)
   });
   $("#search-results").empty();
 });
 
-
+});
 
