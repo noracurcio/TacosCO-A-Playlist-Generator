@@ -1,5 +1,13 @@
 
 
+var ulTag;
+var titleInfo;
+var artistInfo;
+var albumInfo;
+var songInfo;
+var newBr;
+
+
 var apiKey = "444d1a61f4mshd57eb459b8b0709p1e745ajsn2ac16a025434"
 
 
@@ -7,16 +15,6 @@ var apiKey = "444d1a61f4mshd57eb459b8b0709p1e745ajsn2ac16a025434"
 
 
 
-// document.addEventListener('DOMContentLoaded', function() {
-//     var elems = document.querySelectorAll('.carousel');
-//     var instances = M.Carousel.init(elems, options);
-//   });
-
-  // Or with jQuery
-
-//   $(document).ready(function(){
-//     $('.carousel').carousel();
-//   });
 
 
 //make ajax to try to pull img from playlists into an array
@@ -39,30 +37,42 @@ var throwbackPlaylist = {
 
 
 $.ajax(throwbackPlaylist).done(function (response) {
-    console.log(response);
+	console.log(response);
+	
+
     $("#picture-1").on("click", function(test){
 		
 		var playlistInfo = $("#playlist-info")
     
-		for(i = 0; i < response.tracks.data.length; i++){
+		for(i = 0; i < 4; i++){
 			console.log(test)
-			var trackInfo = response.tracks.data[i]
-			var titlePTag = $("<p>").addClass("right-text").text(trackInfo.title);
-			var artistPTag = $("<p>").addClass("right-text").text(trackInfo.artist.name);
-			playlistInfo.append(titlePTag, artistPTag)
-
-			 
+			// var trackInfo = response.tracks.data[i]
+			ulTag = $("<ul>")
+			
+			titleInfo = (response.tracks.data[i].title)
+			artistInfo = (response.tracks.data[i].artist.name)
+			albumInfo = (response.tracks.data[i].album.title)
+			songInfo = $("<li>").addClass("text-white bg-dark").text("Title:  " + titleInfo + "Artist:  " + artistInfo + "Album:  " + albumInfo);
+			newBr = $("<br>")
+			// var artistLi = $("<li>").addClass("right-text text-white bg-dark").text("Artist:  " + trackInfo.artist.name + "   ");
+			ulTag.append(songInfo)
+    		playlistInfo.append(ulTag)
 
 		}
         
 
-        
+      
 	
 
 
-});
-
+	});
 })
+		
+
+
+
+
+
 
 
 
