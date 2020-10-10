@@ -188,6 +188,7 @@ width: 66px;
 font-size: 50px;
 }
 
+<<<<<<< HEAD
 
 
 
@@ -221,3 +222,15 @@ font-size: 50px;
 
 q {font-style: italic;
 }
+=======
+.spotifyExport{
+  float: left;
+  width: 45%
+}
+.appleExport{
+  float: right;
+  width: 45%
+}
+
+
+>>>>>>> main

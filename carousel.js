@@ -1,7 +1,24 @@
+
+
+var ulTag;
+var titleInfo;
+var artistInfo;
+var albumInfo;
+var songInfo;
+var newBr;
+
+
 var apiKey = "444d1a61f4mshd57eb459b8b0709p1e745ajsn2ac16a025434"
 
-//make ajax to try to pull img from playlists into an array
 
+
+
+
+
+
+
+//make ajax to try to pull img from playlists into an array
+//This is the throwback Playlist
 var throwbackPlaylist = {
 	"async": true,
 	"crossDomain": true,
@@ -13,36 +30,56 @@ var throwbackPlaylist = {
 	}
 }
 
+
+
+
+
+
+
 $.ajax(throwbackPlaylist).done(function (response) {
-    console.log(response);
+	console.log(response);
+	
+
+    $("#picture-1").on("click", function(test){
+
+		$("#playlist-info").empty()
+		
+		var playlistInfo = $("#playlist-info")
     
-    // var img = $("<img>").attr("src", "https://api.deezer.com/playlist/2532117644/image" + response.md5_image + ".jpg")
+		for(i = 0; i < 4; i++){
+			console.log(test)
+			// var trackInfo = response.tracks.data[i]
+			ulTag = $("<ul>")
+			
+			titleInfo = (response.tracks.data[i].title)
+			artistInfo = (response.tracks.data[i].artist.name)
+			albumInfo = (response.tracks.data[i].album.title)
+			songInfo = $("<li>").addClass("text-white bg-dark").text("Title:  " + titleInfo + "..." + "Artist:  " + artistInfo + "..." + "Album:  " + albumInfo);
+			newBr = $("<br>")
+			// var artistLi = $("<li>").addClass("right-text text-white bg-dark").text("Artist:  " + trackInfo.artist.name + "   ");
+			var addPlaylistBtn = $("<button>")
+			.addClass("addPlaylistButton")
+			.text("+");
+		  addPlaylistBtn.attr('id', "addPlaylistButton" + (i + 25))
+		//   addPlaylistBtn.attr('indx', indx);
+			songInfo.append(addPlaylistBtn)
+			ulTag.append(songInfo)
+    		playlistInfo.append(ulTag)
 
-    // $("<img>").append(img)
+		}
+        
+
+      
+	
 
 
-    // var img = (response.picture)
-    // console.log(img)
-
-    // $("<img>").append(img)
- 
-
-    $("#picture-1").on("click", function(){
-    var playlistOneInfo = $("<p>").text(response.title, response.tracklist)
-    console.log(playlistOneInfo)
-
+	});
 })
-
-
-});
-
+		
 
 
 
-
-
-
-
+//This is the workout playlist
 var workoutPlaylist = {
 	"async": true,
 	"crossDomain": true,
@@ -55,14 +92,37 @@ var workoutPlaylist = {
 }
 
 $.ajax(workoutPlaylist).done(function (response) {
-    console.log(response);
+	console.log(response);
+	$("#picture-2").on("click", function(test){
+
+		$("#playlist-info").empty()
+		var playlistInfo = $("#playlist-info")
     
+		for(i = 0; i < 4; i++){
+			console.log(test)
+			// var trackInfo = response.tracks.data[i]
+			ulTag = $("<ul>")
+			
+			titleInfo = (response.tracks.data[i].title)
+			artistInfo = (response.tracks.data[i].artist.name)
+			albumInfo = (response.tracks.data[i].album.title)
+			songInfo = $("<li>").addClass("text-white bg-dark").text("Title:  " + titleInfo + "..." + "Artist:  " + artistInfo + "..." + "Album:  " + albumInfo);
+			newBr = $("<br>")
+			// var artistLi = $("<li>").addClass("right-text text-white bg-dark").text("Artist:  " + trackInfo.artist.name + "   ");
+			ulTag.append(songInfo)
+			playlistInfo.append(ulTag)
+			
+		}
+
+	});  
     
 }); 
 
 
-3126664682
 
+
+
+//This is the rock playlist 
 var rockPlaylist = {
 	"async": true,
 	"crossDomain": true,
@@ -75,8 +135,29 @@ var rockPlaylist = {
 }
 
 $.ajax(rockPlaylist).done(function (response) {
-    console.log(response);
-    
-    
-}); 
+	console.log(response);
+	$("#picture-3").on("click", function(test){
 
+		$("#playlist-info").empty()
+		var playlistInfo = $("#playlist-info")
+    
+		for(i = 0; i < 4; i++){
+			console.log(test)
+			// var trackInfo = response.tracks.data[i]
+			ulTag = $("<ul>")
+			
+			titleInfo = (response.tracks.data[i].title)
+			artistInfo = (response.tracks.data[i].artist.name)
+			albumInfo = (response.tracks.data[i].album.title)
+			songInfo = $("<li>").addClass("text-white bg-dark").text("Title:  " + titleInfo + "..." + "Artist:  " + artistInfo + "..." + "Album:  " + albumInfo);
+			newBr = $("<br>")
+			// var artistLi = $("<li>").addClass("right-text text-white bg-dark").text("Artist:  " + trackInfo.artist.name + "   ");
+			ulTag.append(songInfo)
+			playlistInfo.append(ulTag)
+			
+		}
+
+	});  
+    
+    
+})

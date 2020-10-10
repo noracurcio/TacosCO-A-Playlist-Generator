@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TacoTV</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    #image img {
+      position: absolute;
+      left: 50px;
+      top: 35px;
+      z-index: -1;
+      max-width: 175px;
+      max-height: 150px;
+    }
+
+    #tv {
+      max-height: 200px;
+      width: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <img id="tv" src="images/tv.png" alt="tvset">
+  <div id="image"></div>
+  <button id="taco-button">Taco Me</button>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    //
+    $("#taco-button").on("click", function () {
+      var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=VbO0v0QyJkV8hCyqw89KiNvWF4Wu8iAO&tag=taco"
+      $.ajax({
+        url: queryURL,
+        method: "GET"
+      }).then(function (response) {
+        var imageUrl = response.data.image_original_url;
+        var tacoImage = $("<img>");
+        tacoImage.attr("src", imageUrl);
+        tacoImage.attr("alt", "taco image");
+        $("#image").empty()
+        $("#image").append(tacoImage);
+      });
+    });
+  </script>
+</body>
+
+</html>
