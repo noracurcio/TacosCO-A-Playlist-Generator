@@ -70,17 +70,6 @@ $("#searchButton").on("click", function (event) {
 
       searchArr.push(searchObj);
     }
-<<<<<<< HEAD
-    for (a = 0; a < 25; a++) {
-      var button = document.getElementById("addPlaylistButton" + a);
-      $(button).on("click", function (event) {
-        console.log(event.currentTarget.parentElement.children[1].textContent);
-        console.log(event.currentTarget.parentElement.children[2].textContent);
-        console.log(event.currentTarget.parentElement.children[3].textContent);
-      });
-    }
-    console.log(searchArr);
-=======
     for (a=0; a < 29; a++){
     var button = document.getElementById('addPlaylistButton' + a)
     $(button).on("click", function(event){
@@ -98,7 +87,6 @@ $("#searchButton").on("click", function (event) {
     })
   }
     console.log(searchArr)
->>>>>>> 3e9bf4ab72df0584e5abfe188d1dd2756424e28e
   });
   $("#search-results").empty();
 });
