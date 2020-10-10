@@ -9,16 +9,22 @@
   <style>
     #image img {
       position: absolute;
-      left: 150px;
-      top: 75px;
+      left: 50px;
+      top: 35px;
       z-index: -1;
-      max-width: 400px;
+      max-width: 175px;
+      max-height: 150px;
+    }
+
+    #tv {
+      max-height: 200px;
+      width: auto;
     }
   </style>
 </head>
 
 <body>
-  <img src="images/tv.png" alt="tvset">
+  <img id="tv" src="images/tv.png" alt="tvset">
   <div id="image"></div>
   <button id="taco-button">Taco Me</button>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
