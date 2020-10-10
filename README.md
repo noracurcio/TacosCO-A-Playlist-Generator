@@ -1,7 +1,7 @@
 # Music-API-Group-Project
 [Deployed Here](https://noracurcio.github.io/Music-API-Group-Project/)
 [Repo Here](https://github.com/noracurcio/Music-API-Group-Project.git)
-![Screenshot Here](images\screenshot.jpg)
+![Screenshot Here](images/screenshot.jpg)
 
 ## introduction
 TacoCO's musical playlist generator helps you to search for music, and organize it into a playlist you can import into your local Spotify and iTunes programs. We are also the music page we know of to feature TacoTV, to display interesting gif files while you listen to music.
