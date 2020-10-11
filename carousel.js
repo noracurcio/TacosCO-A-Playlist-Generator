@@ -109,6 +109,15 @@ $.ajax(workoutPlaylist).done(function (response) {
 			songInfo = $("<li>").addClass("text-white bg-dark").text("Title:  " + titleInfo + "..." + "Artist:  " + artistInfo + "..." + "Album:  " + albumInfo);
 			newBr = $("<br>")
 			// var artistLi = $("<li>").addClass("right-text text-white bg-dark").text("Artist:  " + trackInfo.artist.name + "   ");
+			var addPlaylistBtn = $("<button>")
+			.addClass("addPlaylistButton")
+			.text("+");
+		  addPlaylistBtn.attr('id', "addPlaylistButton" + (i + 25))
+		//   addPlaylistBtn.attr('indx', indx);
+			songInfo.append(addPlaylistBtn)
+			ulTag.append(songInfo)
+    		playlistInfo.append(ulTag)
+
 			ulTag.append(songInfo)
 			playlistInfo.append(ulTag)
 			
@@ -152,6 +161,12 @@ $.ajax(rockPlaylist).done(function (response) {
 			songInfo = $("<li>").addClass("text-white bg-dark").text("Title:  " + titleInfo + "..." + "Artist:  " + artistInfo + "..." + "Album:  " + albumInfo);
 			newBr = $("<br>")
 			// var artistLi = $("<li>").addClass("right-text text-white bg-dark").text("Artist:  " + trackInfo.artist.name + "   ");
+			var addPlaylistBtn = $("<button>")
+			.addClass("addPlaylistButton")
+			.text("+");
+		  addPlaylistBtn.attr('id', "addPlaylistButton" + (i + 25))
+		//   addPlaylistBtn.attr('indx', indx);
+			songInfo.append(addPlaylistBtn)
 			ulTag.append(songInfo)
 			playlistInfo.append(ulTag)
 			
