@@ -7,6 +7,8 @@ $(document).ready(function () {
   let genre;
   let length;
   let searchArr;
+  let searchObj;
+
   userChoice = $("#searchOptions").val();
   $("#searchButton").on("click", function (event) {
     event.preventDefault();
@@ -75,19 +77,21 @@ $(document).ready(function () {
         var button = document.getElementById('addPlaylistButton' + a)
         $(button).on("click", function (event) {
 
+          $("#tacoTV").remove();
 
-          console.log(event)
 
-          console.log(event.currentTarget.parentElement.children[1].textContent)
-          console.log(event.currentTarget.parentElement.children[2].textContent)
-          console.log(event.currentTarget.parentElement.children[3].textContent)
+          // console.log(event)
+
+          // console.log(event.currentTarget.parentElement.children[1].textContent)
+          // console.log(event.currentTarget.parentElement.children[2].textContent)
+          // console.log(event.currentTarget.parentElement.children[3].textContent)
 
           var li = $("<lil>").addClass("list-group-item list-group-item-light").text(event.currentTarget.parentElement.children[1].textContent + event.currentTarget.parentElement.children[2].textContent + event.currentTarget.parentElement.children[3].textContent)
           $(".playlist").append(li)
 
         })
       }
-      console.log(searchArr)
+      // console.log(searchArr)
     });
     $("#search-results").empty();
   });
@@ -152,4 +156,5 @@ $(document).ready(function () {
   });
 
   myTypeItInstance.go();
-})
+
+});
