@@ -6,6 +6,7 @@
   margin: none;
 } */
 
+/* Taco Playlist */
 h1 {
   text-align: center;
 }
@@ -16,12 +17,9 @@ body {
   font-family: 'Teko', sans-serif;
 }
 
-.main {
-  scroll-padding-top: 70px; /* height of sticky header */
-  
-}
 
 header {
+  position: relative;
   width: 100%;
   font-family: 'Teko', sans-serif;
   background-color: #2a9d8f;
@@ -32,16 +30,14 @@ header {
   height: 60px;
 }
 
-#taco {
-  width: 44px;
-  height: 33px;
-  
+#tacomusic {
+  font-size: 20px;
 }
 
 #title {
   font-size: 25px;
-  
 }
+
 
 section {
   position: sticky;
