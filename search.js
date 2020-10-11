@@ -86,9 +86,12 @@ $(document).ready(function () {
           // console.log(event.currentTarget.parentElement.children[2].textContent)
           // console.log(event.currentTarget.parentElement.children[3].textContent)
 
-          var li = $("<lil>").addClass("list-group-item list-group-item-light").text(event.currentTarget.parentElement.children[1].textContent + event.currentTarget.parentElement.children[2].textContent + event.currentTarget.parentElement.children[3].textContent)
+          var li = $("<lil>").addClass("list-group-item list-group-item-light").text(event.currentTarget.parentElement.children[1].textContent + event.currentTarget.parentElement.children[2].textContent + event.currentTarget.parentElement.children[3].textContent);
+          li.append('<button id = "delete">x</button>');
           $(".playlist").append(li)
-
+          $(".playlist").on("click", "#delete", function () {
+            $(this).parent().remove();
+          });
         })
       }
       // console.log(searchArr)
