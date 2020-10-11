@@ -92,7 +92,7 @@ $(document).ready(function () {
           $(".playlist").on("click", "#delete", function () {
             $(this).parent().remove();
           });
-        })
+        });
       }
       // console.log(searchArr)
     });
