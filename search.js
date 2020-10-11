@@ -87,7 +87,7 @@ $(document).ready(function () {
     $("#search-results").empty();
   });
 
-  $("#spotifyExport").on("click", function (event) {
+  $("#playlistExport").on("click", function (event) {
     var songData = (event.target.parentElement.children[0].innerText);
     // console.log(event.target.parentElement.children[0].innerText)
     const copyToClipboard = str => {
@@ -102,12 +102,9 @@ $(document).ready(function () {
       document.body.removeChild(el);
     }
     copyToClipboard(songData);
-    alert("Your playlist has been copied to your clipboard. Open a blank notepad file and paste!");
+    $("#playlistExport").text("Your playlist has been copied to your clipboard. Open a blank notepad file and paste!");
   });
 
-  $("#appleExport").on("click", function (event) {
-    console.log(event.target.parentElement.children[0].firstChild);
-  })
   let myTypeItInstance = new TypeIt("#element", {
     // speed: 100,
     afterComplete: function (step, instance) {
