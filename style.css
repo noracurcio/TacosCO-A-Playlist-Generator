@@ -57,7 +57,7 @@ button {
   font-size: 22px;
   font-family: 'Teko', sans-serif;  
   line-height: 22px;
-  margin: 5px 5px 5px 5px;
+  /* margin: 5px 5px 5px 5px; */
   padding: 2px;
   text-align: center;
   cursor: pointer;
@@ -161,13 +161,13 @@ width: 66px;
 font-size: 50px;
 }
 
-.spotifyExport{
+.playlistExport{
   float: left;
-  width: 45%
+  width: 100%
 }
-.appleExport{
-  float: right;
-  width: 45%
+.searchResult{
+  height: 230px;
+  width: 440;
 }
 
 
