@@ -21,7 +21,7 @@ body {
   
 }
 
-.header {
+header {
   width: 100%;
   font-family: 'Teko', sans-serif;
   background-color: #2a9d8f;
@@ -188,7 +188,6 @@ width: 66px;
 font-size: 50px;
 }
 
-<<<<<<< HEAD
 
 
 
@@ -222,7 +221,6 @@ font-size: 50px;
 
 q {font-style: italic;
 }
-=======
 .spotifyExport{
   float: left;
   width: 45%
@@ -233,4 +231,3 @@ q {font-style: italic;
 }
 
 
->>>>>>> main
