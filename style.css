@@ -193,7 +193,7 @@ font-size: 50px;
 
 /* WORKING QUOTE SLIDESHOW */
 
-.slideshow-container {
+/* .slideshow-container {
   position: relative;
   background: #e9c46a;
   font-family: "Times New Roman", Times, serif;
@@ -220,7 +220,9 @@ font-size: 50px;
 }
 
 q {font-style: italic;
-}
+} */
+
+/* PLAYLIST EXPORT */
 .spotifyExport{
   float: left;
   width: 45%
