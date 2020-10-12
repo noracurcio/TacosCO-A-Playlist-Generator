@@ -13,13 +13,13 @@
   <link rel="stylesheet" href="style.css">
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-    </script>
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
     integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
-    </script>
+  </script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
-    </script>
+  </script>
   <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;700&display=swap" rel="stylesheet">
 
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
@@ -34,116 +34,92 @@
 </head>
 
 <body>
-  <!-- HEADER -->
 
   <header class="container-fluid">
     <div class="row">
-      <img id= "tacomusic" src="tacomusic.png" class="img-fluid col-3" alt="A taco listening to music.">
+      <img id="tacoicon" src="tacomusic.png"  alt="A taco listening to music.">
       <h1 class="col-9" id="element">Taco's Co Playlist Generator</h1>
 
     </div>
   </header>
 
 
+  <div class="container-fluid">
+    <div class="row">
+      <!-- SEARCH AREA -->
+      <div class="col-12 col-md-4" id="search">
+        <form id="search">
+          <input type="text" id="search-input" class="searchInput">
+          <input id="searchButton" type="submit" value="Search" class="searchButton">
+        </form>
+        <div id="search-results" class="scroll"></div>
 
-  <main>
-
-    <!-- ADDED TACO QUOTES-->
-    <section>
-      <!-- Slideshow container -->
-      <div class="slideshow-container">
-
-        <!-- Full-width slides/quotes -->
-        <div class="tacoQuotes">
-          <q>Ways to My Heart: Make me a Taco'S Co playlist + bring me tacos</q>
-        </div>
-
-        <div class="tacoQuotes">
-          <q>Live everyday like it's Taco Tuesday.</q>
-        </div>
-
-        <div class="tacoQuotes">
-          <q>A balanced diet is a taco in each hand.</q>
-        </div>
-
-        <!-- Dots indicators -->
-        <div class="dot-container">
-          <span class="dot" onclick="currentSlide(1)"></span>
-          <span class="dot" onclick="currentSlide(2)"></span>
-          <span class="dot" onclick="currentSlide(3)"></span>
-        </div>
-    </section>
-    <!-- END OF TACO QUOTES SECTION-->
-
-    <div id="content" class="container">
-      <div class="row">
-        <!-- SEARCH AREA -->
-
+      </div>
 
       <div class="col-12 col-md-4">
         <div class="playlist scroll" id="playlist">
           <div id="tacoTV" class="embed-responsive embed-responsive-1by1">
             <iframe class="embed-responsive-item" src="tv.html"></iframe>
           </div>
-          <button id="playlistExport" class="playlistExport">Export your playlist</button>
         </div>
         <button id="playlistExport" class="playlistExport">Export your playlist!</button>
       </div>
 
-        <div class="col-12 col-md-4" id=carouselContainer>
-          <!-- COLLECTIONS -->
-          <h2>Trending Songs: Ideas for New Tracks</h2>
-          <div class="col-12 carousel">
-            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img id="picture-1" src="images/popworkout.jpg" class="d-block w-100" alt="pop workout">
-                </div>
-                <div class="carousel-item">
-                  <img id="picture-2" src="images/throwbackpop.jpg" class="d-block w-100" alt="throwback pop">
-                </div>
-                <div class="carousel-item">
-                  <img id="picture-3" src="images/rockroadtrip.jpg" class="d-block w-100" alt="rock road trip">
-                </div>
+      <div class="col-12 col-md-4" id=carouselContainer>
+        <!-- COLLECTIONS -->
+        <h2>Trending Songs: 
+          <p>Ideas for New Tracks</p>
+          </h2>
+        <div class="col-12 carousel">
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img id="picture-1" src="images/popworkout.jpg" class="d-block w-100" alt="pop workout">
               </div>
-              <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
+              <div class="carousel-item">
+                <img id="picture-2" src="images/throwbackpop.jpg" class="d-block w-100" alt="throwback pop">
+              </div>
+              <div class="carousel-item">
+                <img id="picture-3" src="images/rockroadtrip.jpg" class="d-block w-100" alt="rock road trip">
+              </div>
             </div>
-
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
           </div>
-          <div id="playlist-info"></div>
-        </div>
-      </div>
 
+        </div>
+        <div id="playlist-info"></div>
+      </div>
     </div>
 
-
-    <footer class="footer">
-      <p>
-        Tacos + music, Does it get any better than this? We hope you've enjoyed our website!
-        &copy; 2020 Taco's Co.
-      </p>
-    </footer>
+  </div>
 
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <link rel="stylesheet" href="" class="css">
+  <footer class="footer">
+    <p>
+      Tacos + music, Does it get any better than this? We hope you've enjoyed our website!
+      &copy; 2020 Taco's Co.
+    </p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+  <link rel="stylesheet" href="" class="css">
 
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
-    <!-- <script src="script.js"></script> -->
-    <script src="carousel.js"></script>
-    <script src="search.js"></script>
-    <script src="taco-quotes.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
+  <!-- <script src="script.js"></script> -->
+  <script src="carousel.js"></script>
+  <script src="search.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
 
 
 </body>

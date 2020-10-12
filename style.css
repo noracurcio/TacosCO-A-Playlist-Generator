@@ -1,57 +1,44 @@
 .searchInput{
   width:66%
 }
-/* .container{
+.container{
   width: 100%;
   margin: none;
-} */
+}
 
-/* Taco Playlist */
 h1 {
   text-align: center;
 }
 
-
-body {
-  background-color: #264653;
-  font-family: 'Teko', sans-serif;
+.col-12 {
+ font-family: 'Teko', sans-serif;;
 }
 
+body {
+  /* font-family: sans-serif; */
+  background-color: #264653;
+}
+
+.wrapper {
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
 
 header {
-  position: relative;
-  width: 100%;
   font-family: 'Teko', sans-serif;
   background-color: #2a9d8f;
   text-align: center;
   padding: 10px;
   color: #264653;
   border-bottom: 5px solid #e9c46a;
-  height: 60px;
 }
 
-#tacomusic {
-  font-size: 20px;
+#tacoicon {
+  width: 53px;
+  height: auto;
+  padding-left: 5px;
 }
-
-#title {
-  font-size: 25px;
-}
-
-
-section {
-  position: sticky;
-  width: 100%;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  background-color: #e76f51;
-  text-align: center;
-  /* padding: 10px; */
-  /* color: #264653; */
-  height: 40px;
-  top: 0;
-  /* padding-top: 60px; */
-}
-
 
 #searchButton {
   float: right;
@@ -61,16 +48,26 @@ section {
 .carousel {
   width: 100%;
   height: auto;
-  min-width: 100px;
-  max-width: 250px;
 }
 .carouselContainer{
   float: right;
 }
 
-#searchButton {
+h2 {
+  padding-top: 20px;
+  color: white;
+  text-align: center;
+  width: 723px 65%;
+}
+
+#playlist-info {
+  padding-top: 15px;
+  padding-right: 15px;
+}
+
+button {
   border: none;
-  background-color: #f4a261;
+  /* background-color: #e9c46a; */
   border-radius: 15px;
   box-shadow: #264653;
   color: #264653;
@@ -85,9 +82,9 @@ section {
   font-size: medium;
 }
 
-button:hover {
-  background-color: #e9c46a;
-}
+/* button:hover {
+  background-color: #f4a261;
+} */
 
 /* #searchButton {
   border: none;
@@ -105,16 +102,24 @@ button:hover {
   cursor: pointer;
   font-size: medium;
 }
-
 button:hover {
   background-color: #f4a261;
 } */
 
 
+footer {
+  background-color: #2a9d8f;
+  padding: 10px;
+  text-align: center;
+  font-size: small;
+  bottom: 0;
+  position: sticky;
+}
 #search{
   float: left;
   width: 100%;
   margin: none;
+  padding-top: 10px;
   padding: none;
 }
 .row{
@@ -122,14 +127,14 @@ button:hover {
   
 }
 .scroll{
-  margin:4px, 4px; 
-  padding:4px; 
-  background-color:  #264653; 
-  width: 100%; 
-  height: 495px; 
-  overflow-x: hidden; 
-  overflow-y: auto; 
-  text-align:justify; 
+    /* margin:4px, 4px; 
+    padding:px;  */
+    background-color:  #264653; 
+    width: 100%; 
+    height: 495px; 
+    overflow-x: hidden; 
+    overflow-y: auto; 
+    text-align:justify; 
 }
 .list-group-item{
   border: solid;
@@ -142,16 +147,6 @@ button:hover {
   width: 100%;
   height: 90%
 }
-
-footer {
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #2a9d8f;
-  text-align: center;
-  font-size: small;
-  position: sticky;
- }
 .albumArt{
   width:33%;
   float: left;
@@ -184,46 +179,7 @@ width: 66px;
 font-size: 50px;
 }
 
-<<<<<<< HEAD
-
-
-
-/* WORKING QUOTE SLIDESHOW */
-
-.slideshow-container {
-  position: relative;
-  background: #e9c46a;
-  font-family: "Times New Roman", Times, serif;
-}
-
-.tacoQuotes {
-  display: none;
-  text-align: center;
-}
-
-.dot {
-  cursor: pointer;
-  height: 8px;
-  width: 8px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-q {font-style: italic;
-}
-
-/* PLAYLIST EXPORT */
-.spotifyExport{
-=======
 .playlistExport{
->>>>>>> main
   float: left;
   width: 100%
 }
@@ -231,5 +187,3 @@ q {font-style: italic;
   height: 230px;
   width: 440;
 }
-
-
