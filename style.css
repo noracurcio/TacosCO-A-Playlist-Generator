@@ -36,7 +36,7 @@ header {
 
 #tacoicon {
   width: 53px;
-  height: auto;
+  max-height: 49px;
   padding-left: 5px;
 }
 
