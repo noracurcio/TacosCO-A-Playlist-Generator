@@ -21,13 +21,23 @@
     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
   </script>
   <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+
+
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+
+
+
 </head>
 
 <body>
 
   <header class="container-fluid">
     <div class="row">
-      <img src="tacomusic.png" class="img-fluid col-3" alt="A taco listening to music.">
+      <img id="tacoicon" src="tacomusic.png"  alt="A taco listening to music.">
       <h1 class="col-9" id="element">Taco's Co Playlist Generator</h1>
 
     </div>
@@ -47,18 +57,19 @@
       </div>
 
       <div class="col-12 col-md-4">
-        <div class="playlist" id="playlist">
+        <div class="playlist scroll" id="playlist">
           <div id="tacoTV" class="embed-responsive embed-responsive-1by1">
             <iframe class="embed-responsive-item" src="tv.html"></iframe>
           </div>
         </div>
-        <button id="spotifyExport" class="spotifyExport">Export your playlist to Spotify</button>
-        <button id="appleExport" class="appleExport">Export your playlist to Apple Music</button>
+        <button id="playlistExport" class="playlistExport">Export your playlist!</button>
       </div>
 
       <div class="col-12 col-md-4" id=carouselContainer>
         <!-- COLLECTIONS -->
-        <h2>Trending Songs: Ideas for New Tracks</h2>
+        <h2>Trending Songs: 
+          <p>Ideas for New Tracks</p>
+          </h2>
         <div class="col-12 carousel">
           <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
