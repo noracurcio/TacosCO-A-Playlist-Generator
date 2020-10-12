@@ -34,6 +34,12 @@ header {
   border-bottom: 5px solid #e9c46a;
 }
 
+#tacoicon {
+  width: 53px;
+  height: auto;
+  padding-left: 5px;
+}
+
 #searchButton {
   float: right;
   width: 33%;
@@ -45,6 +51,18 @@ header {
 }
 .carouselContainer{
   float: right;
+}
+
+h2 {
+  padding-top: 20px;
+  color: white;
+  text-align: center;
+  width: 723px 65%;
+}
+
+#playlist-info {
+  padding-top: 15px;
+  padding-right: 15px;
 }
 
 button {
@@ -84,7 +102,6 @@ button {
   cursor: pointer;
   font-size: medium;
 }
-
 button:hover {
   background-color: #f4a261;
 } */
@@ -92,7 +109,7 @@ button:hover {
 
 footer {
   background-color: #2a9d8f;
-  padding: 15px;
+  padding: 10px;
   text-align: center;
   font-size: small;
   bottom: 0;
@@ -102,6 +119,7 @@ footer {
   float: left;
   width: 100%;
   margin: none;
+  padding-top: 10px;
   padding: none;
 }
 .row{
@@ -169,5 +187,3 @@ font-size: 50px;
   height: 230px;
   width: 440;
 }
-
-
