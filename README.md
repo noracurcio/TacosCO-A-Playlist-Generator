@@ -1,7 +1,7 @@
 # Music-API-Group-Project
 * [Deployed Project](https://noracurcio.github.io/Music-API-Group-Project/)
 * [Repository](https://github.com/noracurcio/Music-API-Group-Project.git)
-* ![Screenshot Here](images/overview.png)
+* ![Screenshot Here](images/Overview.PNG)
 
 ## Introduction
 Taco CO's musical playlist generator helps the user search for music, create and organize searched songs into a playlist, that can then be exported. Our application it the first of it's kind to also feature TacoTV, which displays unique GIFs while the user listens to music!

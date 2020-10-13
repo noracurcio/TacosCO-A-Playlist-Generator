@@ -46,8 +46,8 @@ $(document).ready(function () {
         var addPlaylistBtn = $("<button>")
           .addClass("addPlaylistButton")
           .text("+");
-        addPlaylistBtn.attr('id', "addPlaylistButton" + i);
-        addPlaylistBtn.attr('indx', indx);
+        addPlaylistBtn.attr("id", "addPlaylistButton" + i);
+        addPlaylistBtn.attr("indx", indx);
         var resultDiv = $("<div>");
         resultDiv.addClass("searchResult");
         var albumArt = $("<img>");
@@ -72,10 +72,16 @@ $(document).ready(function () {
         searchArr.push(searchObj);
       }
       for (a = 0; a < 29; a++) {
-        var button = document.getElementById('addPlaylistButton' + a);
+        var button = document.getElementById("addPlaylistButton" + a);
         $(button).on("click", function (event) {
           $("#tacoTV").remove();
-          var li = $("<lil>").addClass("list-group-item list-group-item-light").text(event.currentTarget.parentElement.children[1].textContent + event.currentTarget.parentElement.children[2].textContent + event.currentTarget.parentElement.children[3].textContent);
+          var li = $("<lil>")
+            .addClass("list-group-item list-group-item-light")
+            .text(
+              event.currentTarget.parentElement.children[1].textContent +
+                event.currentTarget.parentElement.children[2].textContent +
+                event.currentTarget.parentElement.children[3].textContent
+            );
           li.append('<button id = "delete">x</button>');
           $(".playlist").append(li);
           $(".playlist").on("click", "#delete", function () {
@@ -88,30 +94,31 @@ $(document).ready(function () {
   });
 
   $("#playlistExport").on("click", function (event) {
-    var songData = (event.target.parentElement.children[0].innerText);
+    var songData = event.target.parentElement.children[0].innerText;
     // console.log(event.target.parentElement.children[0].innerText)
-    const copyToClipboard = str => {
-      const el = document.createElement('textarea');
+    const copyToClipboard = (str) => {
+      const el = document.createElement("textarea");
       el.value = str;
-      el.setAttribute('readonly', '');
-      el.style.position = 'absolute';
-      el.style.left = '-9999px';
+      el.setAttribute("readonly", "");
+      el.style.position = "absolute";
+      el.style.left = "-9999px";
       document.body.appendChild(el);
       el.select();
-      document.execCommand('copy');
+      document.execCommand("copy");
       document.body.removeChild(el);
-    }
+    };
     copyToClipboard(songData);
-    $("#playlistExport").text("Your playlist has been copied to your clipboard. Open a blank notepad file and paste!");
+    $("#playlistExport").text(
+      "Your playlist has been copied to your clipboard. Open a blank notepad file and paste!"
+    );
   });
 
   let myTypeItInstance = new TypeIt("#element", {
     // speed: 100,
     afterComplete: function (step, instance) {
       instance.destroy();
-    }
+    },
   });
 
   myTypeItInstance.go();
-
 });
