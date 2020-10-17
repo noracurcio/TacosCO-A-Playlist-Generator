@@ -1,7 +1,8 @@
-.searchInput{
-  width:66%
+.searchInput {
+  width: 66%;
 }
-.container{
+
+.container {
   width: 100%;
   margin: none;
 }
@@ -11,11 +12,10 @@ h1 {
 }
 
 .col-12 {
- font-family: 'Teko', sans-serif;;
+  font-family: 'Teko', sans-serif;
 }
 
 body {
-  /* font-family: sans-serif; */
   background-color: #264653;
 }
 
@@ -49,7 +49,8 @@ header {
   width: 100%;
   height: auto;
 }
-.carouselContainer{
+
+.carouselContainer {
   float: right;
 }
 
@@ -73,7 +74,7 @@ button {
   color: #264653;
   /* display: inline-block; */
   font-size: 22px;
-  font-family: 'Teko', sans-serif;  
+  font-family: 'Teko', sans-serif;
   line-height: 22px;
   /* margin: 5px 5px 5px 5px; */
   padding: 2px;
@@ -115,68 +116,66 @@ footer {
   bottom: 0;
   position: sticky;
 }
-#search{
+
+#search {
   float: left;
   width: 100%;
   margin: none;
   padding-top: 10px;
   padding: none;
 }
-.row{
-  width: 100%
-  
+
+.row {
+  width: 100%;
 }
-.scroll{
-    /* margin:4px, 4px; 
-    padding:px;  */
-    background-color:  #264653; 
-    width: 100%; 
-    height: 495px; 
-    overflow-x: hidden; 
-    overflow-y: auto; 
-    text-align:justify; 
+
+.scroll {
+  background-color: #264653;
+  width: 100%;
+  height: 495px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: justify;
 }
-.list-group-item{
+
+.list-group-item {
   border: solid;
 }
-.playlistBuild{
+
+.playlistBuild {
   align-self: center;
   float: bottom;
 }
-.playlist{
+
+.playlist {
   width: 100%;
   height: 525px;
 }
-.albumArt{
-  width:33%;
+
+.albumArt {
+  width: 33%;
   float: left;
 }
-.artistResult{
+
+.artistResult {
   width: 66%;
   float: right;
   color: whitesmoke;
   font-size: 25px;
 }
-.albumResult{
+
+.albumResult {
   width: 66%;
   float: right;
   color: whitesmoke;
   font-size: 25px;
 }
-.songResult{
+
+.songResult {
   width: 66%;
   float: right;
   color: whitesmoke;
   font-size: 25px;
-}
-.playBtn{
-float: left;
-}
-.addPlaylistButton{
-float: right;
-height: 66px;
-width: 66px;
-font-size: 50px;
 }
 
 .playlistExport{
